@@ -1,0 +1,281 @@
+body {
+margin: 0;
+padding: 0;
+font-family: "Segoe UI", sans-serif;
+background: linear-gradient(
+135deg,
+#0f172a,
+#1e3a8a,
+#2563eb
+);
+min-height: 100vh;
+}
+
+.dashboard {
+width: 95%;
+max-width: 1400px;
+margin: auto;
+padding: 25px;
+}
+
+.header {
+text-align: center;
+background: linear-gradient(135deg, #001f54, #034078);
+color: white;
+padding: 40px;
+border-radius: 25px;
+margin-bottom: 30px;
+box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+}
+
+.header h2 {
+margin: 0;
+font-size: 30px;
+color: #cbd5e1;
+font-weight: 500;
+}
+
+.header p {
+margin-top: 12px;
+color: #93c5fd;
+font-size: 18px;
+letter-spacing: 2px;
+}
+
+.header h1 {
+margin-top: 20px;
+font-size: 60px;
+font-weight: 800;
+letter-spacing: 4px;
+color: white;
+text-transform: uppercase;
+text-shadow:
+0px 3px 5px rgba(0,0,0,0.3),
+0px 5px 15px rgba(59,130,246,0.6);
+}
+
+.card {
+background: white;
+border-radius: 20px;
+padding: 25px;
+margin-bottom: 25px;
+box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+border-left: 10px solid #2563eb;
+}
+
+.card:hover {
+transform: translateY(-3px);
+transition: 0.3s;
+}
+
+.section-title {
+text-align: center;
+color: #1e3a8a;
+font-size: 32px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.form-row {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+input {
+width: 300px;
+padding: 12px;
+border-radius: 10px;
+border: 2px solid #cbd5e1;
+font-size: 15px;
+}
+
+input:focus {
+outline: none;
+border-color: #2563eb;
+}
+
+button {
+background: #2563eb;
+color: white;
+border: none;
+padding: 12px 24px;
+border-radius: 10px;
+font-size: 15px;
+font-weight: bold;
+cursor: pointer;
+}
+
+button:hover {
+background: #1d4ed8;
+}
+
+.logout-btn {
+background: #dc2626;
+padding: 12px 30px;
+}
+
+.logout-btn:hover {
+background: #b91c1c;
+}
+
+.success-message {
+text-align: center;
+color: green;
+font-weight: bold;
+margin-top: 15px;
+}
+
+.register-container {
+  width: 450px;
+  margin: auto;
+  background: linear-gradient(
+      135deg,
+      #ffffff,
+      #eff6ff
+  );
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+  border-top: 8px solid #2563eb;
+}
+
+.login-container {
+  width: 450px;
+  margin: auto;
+  background: linear-gradient(
+      135deg,
+      #ffffff,
+      #ecfdf5
+  );
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+  border-top: 8px solid #10b981;
+}
+
+.register-container h1 {
+  color: #1e40af;
+  font-size: 58px;
+  margin-bottom: 30px;
+}
+
+.login-container h1 {
+  color: #059669;
+  font-size: 58px;
+  margin-bottom: 30px;
+}
+.login-container h1 {
+color: #1e3a8a;
+margin-bottom: 25px;
+font-size: 40px;
+}
+
+.register-container input,
+.login-container input {
+width: 90%;
+}
+
+.register-container,
+.login-container {
+  width: 450px;
+  margin: 80px auto;
+  padding: 40px;
+
+  background: white;
+  border-radius: 25px;
+
+  text-align: center;
+
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+  border-top: 8px solid #2563eb;
+}
+
+.register-container h1,
+.login-container h1 {
+  color: #1e3a8a;
+  font-size: 52px;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+.register-container input,
+.login-container input {
+  width: 90%;
+  padding: 14px;
+  margin: 10px 0;
+
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+
+  font-size: 16px;
+}
+
+.register-container input:focus,
+.login-container input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.register-container button,
+.login-container button {
+  width: 95%;
+  padding: 14px;
+
+  margin-top: 12px;
+
+  background: #2563eb;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.register-container button:hover,
+.login-container button:hover {
+  background: #1d4ed8;
+}
+
+.auth-title {
+  color: white;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 40px;
+  text-shadow: 0px 3px 10px rgba(0,0,0,0.4);
+}
+
+.auth-subtitle {
+  color: #cbd5e1;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.auth-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 800;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: #facc15;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+}
