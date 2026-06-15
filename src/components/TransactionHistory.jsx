@@ -9,7 +9,7 @@ function TransactionHistory() {
   const getTransactions = async () => {
 
     const response = await axios.get(
-      `http://localhost:8080/api/accounts/transactions?accountNumber=${accountNumber}`
+      `https://ai-banking-system-2.onrender.com:8080/api/accounts/transactions?accountNumber=${accountNumber}`
     );
 
     setTransactions(response.data);

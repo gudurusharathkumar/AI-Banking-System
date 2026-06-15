@@ -8,7 +8,7 @@ function Balance() {
   const checkBalance = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/accounts/balance?accountNumber=${accountNumber}`
+        `https://ai-banking-system-2.onrender.com:8080/api/accounts/balance?accountNumber=${accountNumber}`
       );
 
       setBalance(response.data);

@@ -9,7 +9,7 @@ function DeleteAccount() {
   const deleteAccount = async () => {
 
     const response = await axios.delete(
-      `http://localhost:8080/api/accounts/delete?accountNumber=${accountNumber}`
+      `https://ai-banking-system-2.onrender.com:8080/api/accounts/delete?accountNumber=${accountNumber}`
     );
 
     setMessage(response.data);

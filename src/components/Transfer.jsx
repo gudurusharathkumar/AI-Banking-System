@@ -10,7 +10,7 @@ function Transfer() {
   const transferMoney = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/accounts/transfer",
+        "https://ai-banking-system-2.onrender.com:8080/api/accounts/transfer",
         {
           fromAccountNumber: fromAccount,
           toAccountNumber: toAccount,
