@@ -1,16 +1,173 @@
-# React + Vite
+# AI-Powered Banking Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+AI-Powered Banking Management System is a Full Stack Banking Application developed using React, Spring Boot, and MySQL.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application allows users to:
 
-## React Compiler
+- Register and Login
+- Create Bank Accounts
+- Deposit Money
+- Withdraw Money
+- Transfer Money
+- Check Balance
+- View Transaction History
+- Search Accounts
+- Update Account Holder Name
+- Delete Accounts
+- Get AI-Based Financial Analysis
+- Receive Financial Suggestions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+- React.js
+- Vite
+- Axios
+- CSS
+
+### Backend
+- Java
+- Spring Boot
+- Spring Data JPA
+
+### Database
+- MySQL
+
+### Tools
+- Git
+- GitHub
+- VS Code
+- MySQL Workbench
+- Postman
+
+---
+
+## Project Architecture
+
+Frontend (React)
+
+↓
+
+REST API Calls (Axios)
+
+↓
+
+Backend (Spring Boot)
+
+↓
+
+MySQL Database
+
+---
+
+## Features
+
+### User Module
+- User Registration
+- User Login
+- Dynamic Welcome Message
+
+### Banking Module
+- Create Account
+- Deposit Money
+- Withdraw Money
+- Transfer Money
+- Check Balance
+- Account Details
+- Search Account
+- Update Account Name
+- Delete Account
+
+### AI Module
+- AI Financial Analysis
+- Financial Suggestions
+
+---
+
+## Database Tables
+
+### users
+
+| Column |
+|----------|
+| id |
+| name |
+| email |
+| password |
+
+### accounts
+
+| Column |
+|----------|
+| id |
+| account_holder_name |
+| account_number |
+| balance |
+
+---
+
+## How to Run Frontend
+
+```bash
+npm install
+npm run dev
+```
+
+Frontend URL:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## How to Run Backend
+
+```bash
+mvn spring-boot:run
+```
+
+Backend URL:
+
+```text
+http://localhost:8080
+```
+
+---
+
+## API Endpoints
+
+### User APIs
+
+- POST /api/users/register
+- POST /api/users/login
+
+### Account APIs
+
+- POST /api/accounts/create
+- PUT /api/accounts/deposit
+- PUT /api/accounts/withdraw
+- PUT /api/accounts/transfer
+- GET /api/accounts/balance
+
+---
+
+## GitHub Repository
+
+Repository Link:
+
+https://github.com/gudurusharathkumar/AI-Banking-System
+
+---
+
+## Author
+
+Sharath Kumar Guduru
+
+Full Stack Developer
+
+Java | Spring Boot | React | MySQL
