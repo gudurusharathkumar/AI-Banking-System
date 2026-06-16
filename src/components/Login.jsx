@@ -21,7 +21,7 @@ function Login({ setPage }) {
     try {
 
       const response = await axios.post(
-        "https://ai-banking-system-2.onrender.com:8080/api/users/login",
+        "https://ai-banking-system-2.onrender.com/api/users/login",
         user
       );
 

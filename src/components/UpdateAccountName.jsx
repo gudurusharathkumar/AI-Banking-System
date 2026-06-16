@@ -10,7 +10,7 @@ function UpdateAccountName() {
   const updateName = async () => {
 
     const response = await axios.put(
-      `https://ai-banking-system-2.onrender.com:8080/api/accounts/update-name?accountNumber=${accountNumber}&newName=${newName}`
+      `https://ai-banking-system-2.onrender.com/api/accounts/update-name?accountNumber=${accountNumber}&newName=${newName}`
     );
 
     setMessage(response.data);

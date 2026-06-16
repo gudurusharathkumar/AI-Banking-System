@@ -9,7 +9,7 @@ function AccountDetails() {
   const getDetails = async () => {
 
     const response = await axios.get(
-      `https://ai-banking-system-2.onrender.com:8080/api/accounts/details?accountNumber=${accountNumber}`
+      `https://ai-banking-system-2.onrender.com/api/accounts/details?accountNumber=${accountNumber}`
     );
 
     setAccount(response.data);

@@ -9,7 +9,7 @@ function SearchAccount() {
   const searchAccount = async () => {
 
     const response = await axios.get(
-      `https://ai-banking-system-2.onrender.com:8080/api/accounts/search?name=${name}`
+      `https://ai-banking-system-2.onrender.com/api/accounts/search?name=${name}`
     );
 
     setAccounts(response.data);

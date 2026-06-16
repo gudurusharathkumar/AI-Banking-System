@@ -8,7 +8,7 @@ function CreateAccount() {
   const createAccount = async () => {
     try {
       const response = await axios.post(
-        `https://ai-banking-system-2.onrender.com:8080/api/accounts/create?accountHolderName=${name}`
+        `https://ai-banking-system-2.onrender.com/api/accounts/create?accountHolderName=${name}`
       );
 
       setMessage(response.data);
