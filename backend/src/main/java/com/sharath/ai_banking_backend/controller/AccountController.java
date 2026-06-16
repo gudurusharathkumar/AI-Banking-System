@@ -14,7 +14,10 @@ import com.sharath.ai_banking_backend.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://ai-banking-system-chi.vercel.app"
+})
 @RestController
 @RequestMapping("/api/accounts")
 public class AccountController {
