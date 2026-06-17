@@ -9,7 +9,7 @@ function Deposit() {
   const deposit = async () => {
     try {
       const response = await axios.post(
-        "https://ai-banking-system-2.onrender.com/api/accounts/deposit",
+        "http://localhost:8081/api/accounts/deposit",
         {
           accountNumber,
           amount: Number(amount),

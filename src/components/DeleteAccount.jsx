@@ -7,12 +7,19 @@ function DeleteAccount() {
   const [message, setMessage] = useState("");
 
   const deleteAccount = async () => {
+    try {
 
-    const response = await axios.delete(
-      `https://ai-banking-system-2.onrender.com/api/accounts/delete?accountNumber=${accountNumber}`
-    );
+      const response = await axios.delete(
+        `http://localhost:8081/api/accounts/delete?accountNumber=${accountNumber}`
+      );
 
-    setMessage(response.data);
+      setMessage(response.data);
+
+    } catch (error) {
+
+      console.error(error);
+      setMessage("Delete Failed");
+    }
   };
 
   return (

@@ -2,17 +2,20 @@ import { useState } from "react";
 import axios from "axios";
 
 function TransactionHistory() {
-
   const [accountNumber, setAccountNumber] = useState("");
   const [transactions, setTransactions] = useState([]);
 
   const getTransactions = async () => {
+    try {
+      const response = await axios.get(
+        `http://localhost:8081/api/transactions/account?accountNumber=${accountNumber.trim()}`
+      );
 
-    const response = await axios.get(
-      `https://ai-banking-system-2.onrender.com/api/accounts/transactions?accountNumber=${accountNumber}`
-    );
-
-    setTransactions(response.data);
+      setTransactions(response.data);
+    } catch (error) {
+      console.log(error);
+      alert("Failed to fetch transactions");
+    }
   };
 
   return (
@@ -22,6 +25,7 @@ function TransactionHistory() {
       </h2>
 
       <input
+        type="text"
         placeholder="Account Number"
         value={accountNumber}
         onChange={(e) => setAccountNumber(e.target.value)}
@@ -34,8 +38,7 @@ function TransactionHistory() {
       <ul>
         {transactions.map((t) => (
           <li key={t.id}>
-            {t.transactionType} -
-            {t.amount}
+            {t.transactionType} - ₹{t.amount}
           </li>
         ))}
       </ul>

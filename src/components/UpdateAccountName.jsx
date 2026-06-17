@@ -8,12 +8,16 @@ function UpdateAccountName() {
   const [message, setMessage] = useState("");
 
   const updateName = async () => {
+    try {
+      const response = await axios.put(
+        `http://localhost:8081/api/accounts/update-name?accountNumber=${accountNumber}&newName=${newName}`
+      );
 
-    const response = await axios.put(
-      `https://ai-banking-system-2.onrender.com/api/accounts/update-name?accountNumber=${accountNumber}&newName=${newName}`
-    );
-
-    setMessage(response.data);
+      setMessage(response.data);
+    } catch (error) {
+      console.error(error);
+      setMessage("Failed to update account name");
+    }
   };
 
   return (
@@ -26,18 +30,14 @@ function UpdateAccountName() {
         type="text"
         placeholder="Account Number"
         value={accountNumber}
-        onChange={(e) =>
-          setAccountNumber(e.target.value)
-        }
+        onChange={(e) => setAccountNumber(e.target.value)}
       />
 
       <input
         type="text"
         placeholder="New Name"
         value={newName}
-        onChange={(e) =>
-          setNewName(e.target.value)
-        }
+        onChange={(e) => setNewName(e.target.value)}
       />
 
       <button onClick={updateName}>

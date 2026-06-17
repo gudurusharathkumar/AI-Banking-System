@@ -9,7 +9,7 @@ function Withdraw() {
   const withdraw = async () => {
     try {
       const response = await axios.post(
-        "https://ai-banking-system-2.onrender.com/api/accounts/withdraw",
+        "http://localhost:8081/api/accounts/withdraw",
         {
           accountNumber,
           amount: Number(amount),

@@ -8,11 +8,20 @@ function AccountDetails() {
 
   const getDetails = async () => {
 
-    const response = await axios.get(
-      `https://ai-banking-system-2.onrender.com/api/accounts/details?accountNumber=${accountNumber}`
-    );
+    try {
 
-    setAccount(response.data);
+      const response = await axios.get(
+        `http://localhost:8081/api/accounts/details?accountNumber=${accountNumber.trim()}`
+      );
+
+      setAccount(response.data);
+
+    } catch (error) {
+
+      console.log(error);
+      alert("Account Not Found");
+
+    }
   };
 
   return (
@@ -25,7 +34,9 @@ function AccountDetails() {
         type="text"
         placeholder="Account Number"
         value={accountNumber}
-        onChange={(e) => setAccountNumber(e.target.value)}
+        onChange={(e) =>
+          setAccountNumber(e.target.value)
+        }
       />
 
       <button onClick={getDetails}>
@@ -34,9 +45,9 @@ function AccountDetails() {
 
       {account && (
         <div>
-          <p>Name: {account.accountHolderName}</p>
-          <p>Account Number: {account.accountNumber}</p>
-          <p>Balance: {account.balance}</p>
+          <p><b>Account Number:</b> {account.accountNumber}</p>
+          <p><b>Account Holder:</b> {account.accountHolderName}</p>
+          <p><b>Balance:</b> ₹{account.balance}</p>
         </div>
       )}
     </div>

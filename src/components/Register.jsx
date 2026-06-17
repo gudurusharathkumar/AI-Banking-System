@@ -23,7 +23,7 @@ function Register({ setPage }) {
     try {
 
       const response = await axios.post(
-        "https://ai-banking-system-2.onrender.com/api/users/register",
+        "http://localhost:8081/api/users/register",
         user
       );
 
